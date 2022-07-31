@@ -19,7 +19,7 @@ class EmployeSeeder extends Seeder
             DB::table('employees')->insert([
             'email' => 'admin@admin.com' ,
             'name' => 'admin',
-            'password' => Hash::make('admin') ,
+            'password' => 'admin' ,
             'type' => 1 ,
             'adress' => '344 BD casa' ,
             'tel' => '0666666666',

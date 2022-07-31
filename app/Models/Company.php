@@ -11,6 +11,7 @@ class Company extends Model
     protected $table = 'companies';
     public $timestamps = false;
     protected $guarded = ['id', 'company_name'];
+    protected $fillable = [ 'company_name' ];
 
     /**
      * Get the employee for the companyt.
