@@ -10,7 +10,7 @@ class History extends Model
     use HasFactory;
     protected $table = 'histories';
     public $timestamps = false;
-    protected $guarded = ['id', 'companies_id', 'histories_id', 'date_history'];
+    protected $fillable = ['id', 'companies_id', 'invitations_id', 'date_history'];
 
     /**
      * Get the employee for the history.

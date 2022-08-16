@@ -10,7 +10,12 @@ class Employee extends Model
     use HasFactory;
     protected $table = 'employees';
     public $timestamps = false;
-    protected $guarded = ['id', 'email', 'name', 'password', 'type', 'adress', 'tel', 'born_date'];
+    protected $fillable = ['id', 'email', 'name', 'password', 'type', 'adress', 'tel', 'born_date'];
+
+    const _EMPLOYEE_USER = 0;
+    const _ADMIN_USER = 1;
+  
+
 
     /**
      * Get the company that owns the employee.

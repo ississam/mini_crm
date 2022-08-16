@@ -51,6 +51,11 @@ Route::middleware(['user_authenticate_and_valid'])->group(function () {
         [EmployeController::class, 'inviteEmploye']
     );
 
+    Route::post(
+        '/employe/completeprofile/{id}',
+        [EmployeController::class, 'completeEmployeeProfile']
+    );
+
     // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     //     return $request->user();
 });
