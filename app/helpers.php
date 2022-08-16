@@ -1,8 +1,10 @@
 <?php
 
-// check if company exist with @param name
+
 
 use App\Models\Company;
+
+// check if company exist with @param name
 
 if (!function_exists('companyExist')) {
         function companyExist($company_name)
@@ -12,4 +14,24 @@ if (!function_exists('companyExist')) {
         
         }
 }
-        
+
+// check if company id exist with @param id
+
+if (!function_exists('companyIdExist')) {
+        function companyIdExist($id)
+        {
+                $company = Company::where('id', $id)->first();
+                return $company;
+        }
+}
+
+// check if company dosen't has any employ exist with @param id
+
+if (!function_exists('companyHaseNoEmploy')) {
+        function companyHaseNoEmploy($id)
+        {
+                $company = Company::join('employees', 'companies.id', '=', 'employees.companies_id')
+                           ->where('companies.id',  $id)->first();
+                return $company;
+        }
+}

@@ -24,7 +24,7 @@ class CheckCompanyData extends FormRequest
     public function rules()
     {
         $rulesList =  [
-            "company_name" => 'required',
+        "company_name" => 'required',
         ];
 
         return $rulesList;
