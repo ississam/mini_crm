@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -43,6 +44,11 @@ Route::middleware(['user_authenticate_and_valid'])->group(function () {
     Route::post(
         '/company/delete/{id}',
         [CompanyController::class, 'destroy']
+    );
+
+    Route::post(
+        '/employe/invite',
+        [EmployeController::class, 'inviteEmploye']
     );
 
     // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

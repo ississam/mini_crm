@@ -158,7 +158,6 @@ class companyController extends Controller
        
         if(!$company_data)
         {
-
                 $response = response()->json([
                     'response_code' => self::_RESPONSE_COMPANY_ID_NOT_EXIST_CODE,
                     'response_message' => self::_RESPONSE_COMPANY_ID_NOT_EXIST_MESSAGE,
