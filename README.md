@@ -44,7 +44,7 @@ To install Back end part of project:
       }
       
  4.Update company : /company/update/{id}
-  Send data to change.
+   Send data to change.
   
  5.Delete company:/company/delete/idcompany
  
