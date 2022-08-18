@@ -16,7 +16,7 @@ class AuthController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', 'confirmed', Password::defaults()],
         ]);
-dd($request->name);
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -38,7 +38,8 @@ dd($request->name);
 
     public function login(Request $request)
     {
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)
+                ->first();
         // print_r($data);
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response([

@@ -34,7 +34,7 @@ Route::middleware(['user_authenticate_and_valid'])->group(function () {
     Route::post(
         '/company/new',
         [CompanyController::class, 'create']
-    );
+    );  
 
     Route::post(
         '/company/update/{id}',
